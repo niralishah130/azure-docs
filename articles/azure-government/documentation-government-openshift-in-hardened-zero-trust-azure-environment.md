@@ -1,5 +1,13 @@
 # OpenShift in a Hardened Zero Trust Azure Environment
 
+## Prerequisities
+* Download az-cli
+
+## Steps
+* Change between lines of 5-25 of parameters in deploy-vars.ps1
+* Run install.ps1
+* Wait for install to complete
+
 This article defines and helps you execute a production-ready DevSecOps environment for Government workloads that is seamlessly configured, deployed, and governed on Azure.
 
 ## Benefits of the solution
