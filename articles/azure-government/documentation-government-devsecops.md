@@ -45,7 +45,7 @@ Additional tools of the ecosystem use case requirements from the DoD, against Az
     * ACR (Azure Container Registry): supported. Azure Container Registry provides the ability to scan containers natively with ACR supplying container build time scanning and remediation. This is actively being expanded to include DoD recommended build time scanners (e.g. Twistlock).
 
 ## Deploying a starting point automated DevSecOps solution
-Azure Global has developed an automated deployable DevSeCOps ecosystem that meets many of the DoD high defensibility and observability requirements listed above. The solution leverages Azure technologies like Azure Blueprint and RedHat OpenShift containers. 
+Azure Global has developed an automated deployable DevSecOps ecosystem that meets many of the DoD high defensibility and observability requirements listed above. The solution leverages Azure technologies like Azure Blueprint and RedHat OpenShift containers. 
 
 Here are the architectural components of the automated DevSecOps ecosystem. Read more [here](https://github.com/Azure/ato-toolkit/tree/master/automation/openshift)
 
