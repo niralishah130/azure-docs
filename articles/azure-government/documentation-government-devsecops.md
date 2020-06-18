@@ -18,17 +18,30 @@ Platform use case requirements from the DoD, against Azure Platform (container/K
     * ARO: supported. ARO provides all of the capabilities to run Kubernetes clusters with least privilege. Customer will have to deploy an AKS cluster with RBAC enabled and create the linkage between an AAD group, Kubernetes namespace and Kubernetes roles and binding.
 
 ## Secure Infrastructure (Zero Trust)
-Platform use case requirements from the DoD, against Azure Platform (container/Kubernetes platform) capabilities and solutions.
+Networking with Kubernetes use case requirements from the DoD, against Azure Platform (container/Kubernetes platform) capabilities and solutions.
+
 
 * *I want to have the ability to encrypt (mTLS), isolate and control service-to-service traffice natively within the Kubernetes context*. 
     * AKS: not supported, in progress. This is currently a user responsibility to install. A service mesh is not installed natively as a part of deploying a AKS cluster today but any servicemesh (Istio, LinkerD, Consul) can be deployed and leveraged by the cluster administrator. Several existing Helm charts simplify the deployment of a service mesh to a AKS cluster. The Azure Networking team is actively working on a native service mesh that AKS will leverage.
     * ARO: supported. ARO can leverage the OpenShift native servicemesh that is based off Istio. In addition, other servicemesh’s can be installed in the cluster by the cluster administrator. This is auto-installed.
     
 ## Containers
-Platform use case requirements from the DoD, against Azure Platform (container/Kubernetes platform) capabilities and solutions.
+Container image use case requirements from the DoD, against Azure Platform (container/Kubernetes platform) capabilities and solutions.
 
 * *I want to deploy my cloud native application from a set of trusted and validated container images (that exist on a DoD repo)*. 
     * MCR (Microsoft Container Registry): not supported, in progress. Official Microsoft MCR images have not been run through the DoD hardening pipeline. Microsoft engineering are actively working to drive the Windows Server and SQL Server container through the DoD hardening process and merge into DoD Repo One. The longer term goal is that Microsoft will develop an automated process that periodically pulls from the MCR repo into the DoD hardening pipeline for scan and remediation.
+
+## CI/CD
+DevOps pipeline use case requirements from the DoD, against Azure Platform (container/Kubernetes platform) capabilities and solutions.
+
+* *I want to secure the image supply chain by securing app code vulnerabilities, insecure version control, tainted base images, insure build automation environments, and insecure private image repos.*. 
+    * GHES (GitHub Enterprise Server): not supported, in progress. GitHub Enterprise Server supports the use of actions to ensure on a regular basis as defined by the DoD new container images are pulled from vendor sources and deployed to repo one in a completely automated fashion.
+    
+## Supporting Tools and Services
+Additional tools of the ecosystem use case requirements from the DoD, against Azure Platform (container/Kubernetes platform) capabilities and solutions.
+
+* *I want to adopt container-specific vulnerability management tools and processes for images and prevent compromises (at build time)*. 
+    * ACR (Azure Container Registry): supported. Azure Container Registry provides the ability to scan containers natively with ACR supplying container build time scanning and remediation. This is actively being expanded to include DoD recommended build time scanners (e.g. Twistlock).
 
 ## Deploying a starting point automated DevSecOps solution
 Azure Global has developed an automated deployable DevSeCOps ecosystem that meets many of the DoD high defensibility and observability requirements listed above. The solution leverages Azure technologies like Azure Blueprint and RedHat OpenShift containers. 
