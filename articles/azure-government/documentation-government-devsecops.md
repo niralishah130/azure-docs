@@ -17,7 +17,7 @@ Platform use case requirements from the DoD, against Azure Platform (container/K
     * AKS: supported. Azure AKS provides all of the capabilities to run Kubernetes clusters with least privilege. Customer will have to deploy an AKS cluster with RBAC enabled and create the linkage between an AAD group, Kubernetes namespace and Kubernetes roles and binding.
     * ARO: supported. ARO provides all of the capabilities to run Kubernetes clusters with least privilege. Customer will have to deploy an AKS cluster with RBAC enabled and create the linkage between an AAD group, Kubernetes namespace and Kubernetes roles and binding.
 
-## Deploying a starting DevSecOps solution
+## Deploying a starting point automated DevSecOps solution
 Azure Global has developed an automated deployable framework that meets many of the requirements listed above. The DevSecOps solution leverages Azure technologies like Azure blueprints and RedHat OpenShift technologies. 
 
 Here are the architectural components of the automated DevSecOps ecosystem. Read more [here](https://github.com/Azure/ato-toolkit/tree/master/automation/openshift)
