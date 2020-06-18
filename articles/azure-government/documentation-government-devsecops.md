@@ -4,8 +4,8 @@ This article defines DoD DevSecOps (DSOP) architectural requirements and how Azu
 
 ## DoD Area Requirements
 Here are some key DoD cloud-native requirements areas that Azure capabilities map against.
-* *Platform*. The container hosting/orchestration platform which leverages Kubernetes. Mapped Azure services include: AKS (Azure Kubernetes Service), ARO (Azure RedHat OpenShift), and ECP (Edge Container Platform).
-* *Secure Zero Trust Architecture*. The networking layer of the DevSecOps ecosystem that handles requests securely. Mapped Azure services include: N/A (Azure Native Service Mesh in progress).
+* *Platform*. The container hosting/orchestration okay coplatform which leverages Kubernetes. Mapped Azure services include: AKS (Azure Kubernetes Service), ARO (Azure RedHat OpenShift), and ECP (Edge Container Platform).
+* *Secure Zero Trust Infrastructure*. The networking layer of the DevSecOps ecosystem that handles requests securely. Mapped Azure services include: N/A (Azure Native Service Mesh in progress).
 * *Containers*. This is the actual container atomic component of the architecture - down to the actual container image leveraged, a DoD application must have a high level of security. Mapped Azure services include: N/A (secure MSFT container images will be hosted in [Repo One](https://repo1.dsop.io)).
 * *CI/CD*. The DevOps pipeline that helps developers write new code, build new app images, and push new updates to your application workload. Mapped Azure services include: Azure DevOps and GitHub.
 * *Supporting Tools and Services*. This encompasses all of the tools and services that help maintain the DevSecOps architecture circled around DoD principles like continous defensibility and observability. Mapped Azure services include: Azure Securiy Center, Azure Policy, Container Insights, Log Analytics, Application Insights.
@@ -16,6 +16,13 @@ Platform use case requirements from the DoD, against Azure Platform (container/K
 * *I want to run a cluster with least-privilege access*. 
     * AKS: supported. Azure AKS provides all of the capabilities to run Kubernetes clusters with least privilege. Customer will have to deploy an AKS cluster with RBAC enabled and create the linkage between an AAD group, Kubernetes namespace and Kubernetes roles and binding.
     * ARO: supported. ARO provides all of the capabilities to run Kubernetes clusters with least privilege. Customer will have to deploy an AKS cluster with RBAC enabled and create the linkage between an AAD group, Kubernetes namespace and Kubernetes roles and binding.
+
+## Secure Infrastructure (Zero Trust)
+Platform use case requirements from the DoD, against Azure Platform (container/Kubernetes platform) capabilities and solutions.
+
+* *I want to have the ability to encrypt (mTLS), isolate and control service-to-service traffice natively within the Kubernetes context*. 
+    * AKS: not supported, in progress. A service mesh is not installed natively as a part of deploying a AKS cluster today but any servicemesh (Istio, LinkerD, Consul) can be deployed and leveraged by the cluster administrator. Several existing Heml charts simplifies the deployment of a serviceMesh to a AKS cluster. This is a user responsibility to install.
+    * ARO: supported. ARO can leverage the OpenShift native servicemesh that is based off Istio. In addition, other servicemesh’s can be installed in the cluster by the cluster administrator. This is auto-installed.
 
 ## Deploying a starting point automated DevSecOps solution
 Azure Global has developed an automated deployable DevSeCOps ecosystem that meets many of the DoD high defensibility and observability requirements listed above. The solution leverages Azure technologies like Azure Blueprint and RedHat OpenShift containers. 
