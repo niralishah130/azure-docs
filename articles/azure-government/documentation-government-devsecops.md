@@ -4,6 +4,7 @@ This article defines DoD DevSecOps (DSOP) architectural and container maturity r
 
 ## DoD Area Requirements
 Here are some key DoD cloud-native requirements areas that Azure capabilities map against.
+
 * *Platform*. The container hosting/orchestration okay coplatform which leverages Kubernetes. Mapped Azure services include: AKS (Azure Kubernetes Service), ARO (Azure RedHat OpenShift), and ECP (Edge Container Platform).
 * *Secure Zero Trust Infrastructure*. The networking layer of the DevSecOps ecosystem that handles requests securely. Mapped Azure services include: N/A as Azure Native Service Mesh in progress.
 * *Containers*. This is the actual container atomic component of the architecture - down to the actual container image leveraged, a DoD application must have a high level of security. Mapped Azure services include: MCR (Microsoft Container Registry) or N/A as secure MSFT container images will be hosted in [Repo One](https://repo1.dsop.io).
@@ -48,9 +49,9 @@ Azure Global has developed an automated deployable DevSeCOps ecosystem that meet
 
 Here are the architectural components of the automated DevSecOps ecosystem. Read more [here](https://github.com/Azure/ato-toolkit/tree/master/automation/openshift)
 
-* *Secure infrastructure*. Use the [Zero Trust Blueprint](https://github.com/Azure/ato-toolkit/automation/zero-trust-architecture) to setup strongly governed components like networking, storage, and monitoring that abide by the Zero Trust "never trust, always verify" philosophy on Azure
-* *Container orchestration*. Use the [secure OpenShift deployment](https://github.com/Azure/ato-toolkit/tree/master/automation/openshift/ocp3.11) to deploy a functional OpenShift 3.11 cluster
-* *Workload*. Use the [Iron Bank verification script](xxx) to ensure you're using a secure Docker image 
+* *Secure infrastructure*. Use the [Zero Trust Blueprint](https://github.com/Azure/ato-toolkit/automation/zero-trust-architecture) to setup strongly governed components like networking, storage, and monitoring that abide by the Zero Trust "never trust, always verify" philosophy on Azure.
+* *Container orchestration*. Use the [secure OpenShift deployment](https://github.com/Azure/ato-toolkit/tree/master/automation/openshift/ocp3.11) to deploy a functional OpenShift 3.11 cluster.
+* *Workload*. Use the [Iron Bank verification script](xxx) to ensure you're using a secure Docker image. 
 
 > [!NOTE]
 > For a full end-to-end tutorial of the solution [see demo video here](https://www.youtube.com/watch?v=gntpwbeWbak).
