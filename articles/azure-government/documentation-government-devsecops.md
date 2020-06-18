@@ -17,14 +17,16 @@ Platform use case requirements from the DoD, against Azure Platform (container/K
     * AKS: supported. Azure AKS provides all of the capabilities to run Kubernetes clusters with least privilege. Customer will have to deploy an AKS cluster with RBAC enabled and create the linkage between an AAD group, Kubernetes namespace and Kubernetes roles and binding.
     * ARO: supported. ARO provides all of the capabilities to run Kubernetes clusters with least privilege. Customer will have to deploy an AKS cluster with RBAC enabled and create the linkage between an AAD group, Kubernetes namespace and Kubernetes roles and binding.
 
-## Deploying the solution
+## Deploying a starting DevSecOps solution
+Azure Global has developed an automated deployable framework that meets many of the requirements listed above. The DevSecOps solution leverages Azure technologies like Azure blueprints and RedHat OpenShift technologies. 
+
+Here are the architectural components of the automated DevSecOps ecosystem. Read more [here](https://github.com/Azure/ato-toolkit/tree/master/automation/openshift)
+
 * *Secure infrastructure*. Use the [Zero Trust Blueprint](https://github.com/Azure/ato-toolkit/automation/zero-trust-architecture) to setup strongly governed components like networking, storage, and monitoring that abide by the Zero Trust "never trust, always verify" philosophy on Azure
 * *Container orchestration*. Use the [secure OpenShift deployment](https://github.com/Azure/ato-toolkit/tree/master/automation/openshift/ocp3.11) to deploy a functional OpenShift 3.11 cluster
 * *Workload*. Use the [Iron Bank verification script](xxx) to ensure you're using a secure Docker image 
 
 > [!NOTE]
-> For more information on Parts 2 and 3 of solution deployment, e.g. Container Orchestration and Workload, please [contact Microsoft-trusted partner CloudFit](https://www.cloudfitsoftware.com/contact-us/)
+> For a full end-to-end tutorial of the solution [see demo video here](https://www.youtube.com/watch?v=gntpwbeWbak).
 > 
 > 
-
-For a full end-to-end tutorial of the solution [see demo video here](https://www.youtube.com/watch?v=gntpwbeWbak).
