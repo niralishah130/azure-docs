@@ -4,13 +4,13 @@ This article defines DoD DevSecOps (DSOP) architectural requirements and how Azu
 
 ## DoD Area Requirements
 Here are some key DoD cloud-native requirements areas that Azure capabilities map against.
-* *Platform*. The container orchestration platform which leverages Kubernetes. Mapped Azure services include: AKS (Azure Kubernetes Service), ARO (Azure RedHat OpenShift), and ECP (Edge Container Platform).
+* *Platform*. The container hosting/orchestration platform which leverages Kubernetes. Mapped Azure services include: AKS (Azure Kubernetes Service), ARO (Azure RedHat OpenShift), and ECP (Edge Container Platform).
 * *Secure Zero Trust Architecture*. The networking layer of the DevSecOps ecosystem that handles requests securely. Mapped Azure services include: N/A (Azure Native Service Mesh in progress).
 * *Containers*. This is the actual container atomic component of the architecture - down to the actual container image leveraged, a DoD application must have a high level of security. Mapped Azure services include: N/A (secure MSFT container images will be hosted in [Repo One](https://repo1.dsop.io)).
 * *CI/CD*. The DevOps pipeline that helps developers write new code, build new app images, and push new updates to your application workload. Mapped Azure services include: Azure DevOps and GitHub.
 * *Supporting Tools and Services*. This encompasses all of the tools and services that help maintain the DevSecOps architecture circled around DoD principles like continous defensibility and observability. Mapped Azure services include: Azure Securiy Center, Azure Policy, Container Insights, Log Analytics, Application Insights.
 
-## Platform
+## Platform (Container Hosting Platform)
 Platform use case requirements from the DoD, against Azure Platform (container/Kubernetes platform) capabilities and solutions.
 
 * *I want to run a cluster with least-privilege access*. 
