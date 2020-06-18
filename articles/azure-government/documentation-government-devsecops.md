@@ -22,7 +22,7 @@ Networking with Kubernetes use case requirements from the DoD, against Azure Pla
 
 
 * *I want to have the ability to encrypt (mTLS), isolate and control service-to-service traffice natively within the Kubernetes context*. 
-    * AKS: not supported, in progress. This is currently a user responsibility to install. A service mesh is not installed natively as a part of deploying a AKS cluster today but any servicemesh (Istio, LinkerD, Consul) can be deployed and leveraged by the cluster administrator. Several existing Helm charts simplify the deployment of a service mesh to a AKS cluster. The Azure Networking team is actively working on a native service mesh that AKS will leverage.
+    * AKS: not supported, in progress. This is currently a user responsibility to install. A service mesh is not installed natively as a part of deploying a AKS cluster today but any service mesh (Istio, LinkerD, Consul) can be deployed and leveraged by the cluster administrator. Several existing Helm charts simplify the deployment of a service mesh to a AKS cluster. The Azure Networking team is actively working on a native service mesh that AKS will leverage.
     * ARO: supported. ARO can leverage the OpenShift native servicemesh that is based off Istio. In addition, other servicemesh’s can be installed in the cluster by the cluster administrator. This is auto-installed.
     
 ## Containers
