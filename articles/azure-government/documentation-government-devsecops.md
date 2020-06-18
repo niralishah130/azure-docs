@@ -8,7 +8,7 @@ Here are some key DoD cloud-native requirements areas that Azure capabilities ma
 * *Secure Zero Trust Infrastructure*. The networking layer of the DevSecOps ecosystem that handles requests securely. Mapped Azure services include: N/A as Azure Native Service Mesh in progress.
 * *Containers*. This is the actual container atomic component of the architecture - down to the actual container image leveraged, a DoD application must have a high level of security. Mapped Azure services include: MCR (Microsoft Container Registry) or N/A as secure MSFT container images will be hosted in [Repo One](https://repo1.dsop.io).
 * *CI/CD*. The DevOps pipeline that helps developers write new code, build new app images, and push new updates to your application workload. Mapped Azure services include: Azure DevOps and GitHub.
-* *Supporting Tools and Services*. This encompasses all of the tools and services that help maintain the DevSecOps architecture circled around DoD principles like continous defensibility and observability. Mapped Azure services include: Azure Securiy Center, Azure Policy, Container Insights, Log Analytics, Application Insights.
+* *Supporting Tools and Services*. This encompasses all of the tools and services that help maintain the DevSecOps architecture circled around DoD principles like continous defensibility and observability. Mapped Azure services include: ACR (Azure Container Registry), Azure Securiy Center, Azure Policy, Container Insights, Log Analytics, Application Insights.
 
 ## Platform (Container Hosting Platform)
 Platform use case requirements from the DoD, against Azure Platform (container/Kubernetes platform) capabilities and solutions.
