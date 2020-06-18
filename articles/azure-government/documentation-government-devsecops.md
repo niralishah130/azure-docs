@@ -3,12 +3,12 @@
 This article defines DoD DevSecOps (DSOP) architectural requirements and how Azure addresses and accounts for them with unique platform capabilities.
 
 ## DoD Area Requirements
-This solution aims to help app developers and security administrators achieve DevSecOps in a few different cutting-edge ways. The benefits of the ecosystem are three-fold: 
-* *Platform* This is the Dev part of DevSecOps – Developers get to focus on writing code and building and delivering application workloads at speed.
-* *Secure Zero Trust Architecture* The Sec part of DevSecOps – Security needs to be at the heart of DoD software development. In our hierarchal Zero Trust solution, each level of the production architecture inherits security from the level below it. This results in a continuously hardened environment from infra all the way up to the workload running on top of it all. We ensure security extends throughout your digital estate
-* *Containers* The Ops part of DevSecOps can be seriously time-consuming. Our entire DevSecOps environment is continuously defensible with 24-hour compliance checks against DoD requirements, which ensures limited or no drift. This greatly reduces operational overhead and allows your team to run their services, 24-7 with confidence
-* *CI/CD* asdfasdf 
-* *Supporting Tools and Services* asdfasdfasd
+Here are some key DoD cloud-native requirements areas that Azure capabilities map against.
+* *Platform*. The container orchestration platform which leverages Kubernetes. Mapped Azure services include: AKS (Azure Kubernetes Service), ARO (Azure RedHat OpenShift), and ECP (Edge Container Platform).
+* *Secure Zero Trust Architecture*. The networking layer of the DevSecOps ecosystem that handles requests securely. Mapped Azure services include: N/A (Azure Native Service Mesh in progress).
+* *Containers*. This is the actual container atomic component of the architecture - down to the actual container image leveraged, a DoD application must have a high level of security. Mapped Azure services include: N/A (secure MSFT container images will be hosted in [Repo One](https://repo1.dsop.io)).
+* *CI/CD*. The DevOps pipeline that helps developers write new code, build new app images, and push new updates to your application workload. Mapped Azure services include: Azure DevOps and GitHub.
+* *Supporting Tools and Services*. This encompasses all of the tools and services that help maintain the DevSecOps architecture circled around DoD principles like continous defensibility and observability. Mapped Azure services include: Azure Securiy Center, Azure Policy, Container Insights, Log Analytics, Application Insights.
 
 ## Components of the solution
 Here are the architectural components of the solution.
