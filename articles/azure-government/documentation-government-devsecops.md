@@ -1,6 +1,6 @@
 # DevSecOps for DoD Workloads on Azure
 
-This article defines DoD DevSecOps (DSOP) architectural and container maturity requirements and how Azure addresses and accounts for them with unique platform capabilities.
+This article defines DoD DevSecOps (DSOP) architectural and container maturity requirements and how Azure addresses and accounts for them with unique platform capabilities and solutions.
 
 ## DoD Area Requirements
 Here are some key DoD cloud-native requirements areas that Azure capabilities map against.
